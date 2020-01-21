@@ -1,9 +1,13 @@
 var katzDeliLine = [];
-
+ let counter = 0;
 
 function takeANumber(arr,name){
  arr.push(name)
  return "welcome, "+name+". you are number "+`${arr.length}`+" in line"
+}
+function takeANumber(arr){
+  arr.push(++counter)
+  return `welcome, you have ticket number ${counter}` 
 }
 
 
@@ -17,7 +21,6 @@ function nowServing(katzDeliLine){
 }
 
 function currentLine(line){
- let x = "The line is currently: ";
   if (line.length === 0){
     return "The line is currently empty."; 
   }else{
